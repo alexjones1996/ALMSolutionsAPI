@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMSolutions</title>
+    {% load static %}
+    <center>
+        <a href="{% url 'index'%}">
+        <img src="{% static 'images/logoValeVerde.png' %}"   alt="logo">
+        </a>
+    </center>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+</head>
+<body>
+    <center>
+    <h1>
+        Fornecedores
+    </h1>
+        
+    
+    <a href="{% url 'cadastrofornecedor'%}">
+        <button> Adicionar </button>
+    </a>
+    
+    <table border="1">
+        <tr>
+            <td>        
+                Nome
+            </td>
+            <td>
+                Nome Fantasia
+            </td>
+            <td>
+                E-mail            
+            </td>
+            <td>
+                Telefone 
+            </td>
+        </tr>
+        {% for fornecedor in fornecedores %}
+        <tr>
+            <td>        
+                {{ fornecedor.nome}}
+            </td>
+            <td>
+                {{ fornecedor.sobrenome}}
+            </td>
+            <td>
+                {{ fornecedor.email}}
+            </td>
+            <td>
+                {{ fornecedor.celular}} 
+            </td>
+            <td>
+            <a href="{% url 'atualizafornecedor' fornecedor.id_fornecedor %}">
+                <button>Editar</button> 
+            </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    </center>
+</body>
+</html>
