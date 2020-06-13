@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html {
+  height: 100%;
+}
+
+body {
+    font-family: "Arial";
+    font-size: 15px;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	background-color: #40e0d0;
+}
+
+button {
+	margin-bottom: 10px;
+	width: 200px;
+	height: 40px;
+	background: black;
+	border: none;
+	border-radius: 10px;
+	font-family: "Arial";
+	color: white;
+	font-size: 20px;
+}
+
+button:hover {
+	background: #b4b4b4;
+	color: black;
+}
+
+
+table{
+
+	text-align: center;
+  background: black;
+	font-size: 20px;
+	color: white;    
+}
+td{
+	width: 200px;
+	height: 30px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  width:600px;
+  flex-direction: column;
+  display: flex;
+}
+
+
+
+
+
+
+
+b {
+  font-weight: bold;
+}
+/*----------------------------------------Login Card----------------------------------------*/
+.card-login {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  width: 300px;
+  border: 1 none;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+
+  box-shadow: 0 0 15px 1px rgba(0,0,0, 0.4);
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+  margin: 3% auto;
+}
+/*------------------------------------------Footer------------------------------------------*/
+.footer {
+    padding-block-end: 1%;
+    text-align: center;
+    font-size: 10px;
+    color: #0c0c0c;
+}
