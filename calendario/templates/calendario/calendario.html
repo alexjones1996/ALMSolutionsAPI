@@ -24,67 +24,44 @@
     
 
     <table border="1">
-        <tr>
-            <td>        
-                Tipo Evento
-            </td>
-            <td>
-                Cliente
-            </td>
-            <td>
-                Serviços Contratados            
-            </td>
-            <td>
-                Descrição 
-            </td>
-            <td>
-                Valor Total 
-            </td>
-            <td>
-                Data 
-            </td>
-        </tr>
+        <thead>
+            <th class="text-center">Evento</th>
+            <th class="text-center">Cliente</th>
+            <th class="text-center">Serviços Contratados</th>
+            <th class="text-center">Descrição</th>
+            <th class="text-center">Valor Total</th>
+            <th class="text-center">Data de Início</th>
+            <th class="text-center">Data Final</th>
+
+        </thead>
+        
         {% for evento in calendario %}
+        {% for item in eventos %}
+
         <tr>
-            <td>        
-                {{ evento.evento}}
-            </td>
-            <td>
-                {{ evento.fk_Cliente}} 
-            </td>
-            <td>
-                {{ evento.servicos}}
-            </td>
-            <td>
-                {{ evento.descricao}}
-            </td>
-            <td>
-                {{ evento.valor}} 
-            </td>
-            <td>
-                {{ evento.data_hora}} 
-            </td>
+            <td>{{ item.summary }}</td>
+            <td>{{ evento.fk_Cliente}} </td>
+            <td>{{ evento.servicos}}</td>
+            <td>{{ evento.descricao}}</td>
+            <td>{{ evento.valor}}</td>
+            <td>{{ item.start.date }}</td>
+            <td>{{ item.end.date }}</td>
+        
             <td>
                 <a href="{% url 'atualizaevento' evento.id_evento %}">
                     <button>Editar</button> 
                 </a>
             </td>
-
-        </tr>
         {% endfor %}
+        {% endfor %}
+
+        
+        </tr>
+
+
     </table>
 
-
-
     </center>
-
-
-
-
-
-
-
-
 
 </body>
 </html>

@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 from django.core import validators
 from django.core.mail import send_mail
 from django.utils.translation import ugettext_lazy as _
@@ -39,6 +37,7 @@ class t_evento(models.Model):
     # USE_TZ=True, a verificação será realizada no fuso horário atual no momento
     # em que o objeto for salvo. A validação do modelo não é no nível do BD
     data = models.DateTimeField()
+    data_termino = models.DateTimeField()
     data_hora = models.SlugField(unique_for_date='data')
     fk_Cliente = models.ForeignKey(clientes.t_cliente, on_delete=models.PROTECT, default='',
         verbose_name='Cliente')
